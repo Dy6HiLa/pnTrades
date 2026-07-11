@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'com.gradleup.shadow' version '8.3.9'
+}
+
+group = 'ru.privatenull'
+version = '1.0.0'
+
+base {
+    archivesName = 'pnTrades'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'papermc-repo'
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
+}
+
+dependencies {
+    compileOnly 'com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT'
+}
+
+def targetJavaVersion = 17
+java {
+    sourceCompatibility = JavaVersion.toVersion(targetJavaVersion)
+    targetCompatibility = JavaVersion.toVersion(targetJavaVersion)
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = targetJavaVersion
+}
+
+tasks.shadowJar {
+    archiveClassifier.set('')
+}
+
+tasks.build {
+    dependsOn tasks.shadowJar
+}
+
+processResources {
+    def props = [version: version]
+    inputs.properties props
+    filteringCharset 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand props
+    }
+}

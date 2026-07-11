@@ -1,0 +1,24 @@
+# Timeout for /trade requests in seconds.
+request-timeout-seconds: 60
+
+messages:
+  player-only: '&cКоманда доступна только игроку.'
+  no-permission: '&cУ вас нет права на обмен.'
+  usage: '&eИспользование: &f/trade <игрок> &7или &f/trade accept|deny <игрок>'
+  player-not-online: '&cИгрок не в сети.'
+  cannot-trade-self: '&cНельзя обмениваться с собой.'
+  already-trading: '&cОдин из игроков уже участвует в обмене.'
+  request-sent: '&aПредложение обмена отправлено игроку &f{player}&a.'
+  request-received: '&e{player} &fпредлагает вам обмен.'
+  request-buttons-prefix: '&8[ '
+  accept-button: '&a&lПРИНЯТЬ'
+  accept-hover: '&aНажмите, чтобы принять обмен с {player}'
+  deny-button: ' &8| &c&lОТКАЗАТЬ &8]'
+  deny-hover: '&cНажмите, чтобы отклонить обмен с {player}'
+  no-request: '&cУ этого игрока нет активного предложения.'
+  request-expired: '&cСрок действия предложения истек.'
+  trade-started: '&aОбмен с &f{player} &aначат.'
+  request-denied: '&7Предложение обмена отклонено.'
+  request-denied-by-player: '&c{player} отклонил(а) предложение обмена.'
+  trade-cancelled: '&cОбмен отменен: {player}'
+  trade-completed: '&aОбмен успешно завершен.'

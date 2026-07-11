@@ -1,0 +1,36 @@
+# {player} is replaced with the other trader's name.
+title: '&8Обмен: &f{player}'
+
+divider:
+  name: '&8|'
+  material: GRAY_STAINED_GLASS_PANE
+  slots: [4, 13, 22, 31, 40, 49]
+
+filler:
+  name: '&8'
+  material: BLACK_STAINED_GLASS_PANE
+
+buttons:
+  self:
+    no:
+      name: '&aПодтвердить обмен'
+      material: LIME_WOOL
+      slot: 38
+      lore:
+        - '&7Нажмите, когда предложение готово.'
+    yes:
+      name: '&aВы подтвердили'
+      material: EMERALD_BLOCK
+      slot: 38
+      lore: []
+  other:
+    no:
+      name: '&cОжидание подтверждения игрока'
+      material: RED_WOOL
+      slot: 42
+      lore: []
+    yes:
+      name: '&aИгрок подтвердил'
+      material: EMERALD_BLOCK
+      slot: 42
+      lore: []

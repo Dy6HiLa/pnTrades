@@ -1,0 +1,19 @@
+name: pnTrades
+version: '${version}'
+main: ru.privatenull.PnTradesPlugin
+api-version: '1.16'
+authors: [privatenull]
+website: https://github.com/Dy6HiLa/pnTrades
+description: Safe GUI trades between players
+commands:
+  trade:
+    description: Предложить игроку обмен или ответить на предложение
+    aliases: [trades, обмен]
+    usage: /trade <игрок>|accept <игрок>|deny <игрок>
+permissions:
+  pntrades.use:
+    description: Использовать обмен между игроками
+    default: true
+  pntrades.admin:
+    description: Получать уведомления об обновлениях pnTrades
+    default: op
